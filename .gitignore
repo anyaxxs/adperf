@@ -1,10 +1,50 @@
+# .gitignore проекта adperf.
+# Правила со "/" в начале относятся только к корню репозитория.
+
+# --- macOS ---
+.DS_Store
+
+# --- Редакторы ---
+.idea/
+.vscode/
+
+# --- Виртуальные окружения ---
 .venv/
+venv/
+
+# --- Python ---
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# --- Кэши и отчёты инструментов ---
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Секреты и локальные настройки (шаблон .env.example храним) ---
 .env
-reports/
-*.sqlite
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Базы данных и логи ---
 *.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# --- Реальные выгрузки: никогда не коммитим (персональные и коммерческие данные) ---
+/data/private/
+
+# --- Сгенерированные отчёты (папку сохраняем через .gitkeep) ---
+# Только корень! Пакет src/adperf/reports/ с кодом должен попадать в Git.
+/reports/*
+!/reports/.gitkeep
