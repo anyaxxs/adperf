@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/adperf/__init__.py
+src/adperf.egg-info/PKG-INFO
+src/adperf.egg-info/SOURCES.txt
+src/adperf.egg-info/dependency_links.txt
+src/adperf.egg-info/requires.txt
+src/adperf.egg-info/top_level.txt
